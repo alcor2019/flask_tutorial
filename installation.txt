@@ -1,6 +1,19 @@
 conda create -n flask_tutorial
 conda activate flask_tutorial
-conda install flask_tutorial
+conda install Flask
 
 git init
 git remote add flask_tutorial https://github.com/alcor2019/flask_tutorial
+
+Remarque : j'ai dû créé manuellement le repository flask_tutorial depuis Github !!!
+
+git remote show flask_tutorial
+git push -u flask_tutorial master
+
+@app.route("/<name>")
+def user(name):
+    return f"Hello {name}"
+
+@app.route("/admin/")
+def admin():
+    return redirect(url_for("user", name="Admin!"))
