@@ -1,0 +1,6 @@
+conda create -n flask_tutorial
+conda activate flask_tutorial
+conda install flask_tutorial
+
+git init
+git remote add flask_tutorial https://github.com/alcor2019/flask_tutorial
